@@ -127,7 +127,7 @@ graph TD
 -  Mean     
 with lapse 平均 profit 略為右移  
 
-**🔥 Core Insight : 最壞情境（極端虧損）在兩種情境下幾乎相同，代表 lapse 無法消除 joint tail event（市場下跌 + 死亡）， tail risk 並未改善**
+**🔥 Core Insight : 最壞情境（極端虧損）在兩種情境下幾乎相同，代表 lapse 無法消除 joint tail event（市場下跌 + 死亡）， left tail 幾乎未改變**
 
 | Metric       | No Lapse         | With Lapse       |
 |:-------------|-----------------:|-----------------:|
