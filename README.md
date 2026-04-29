@@ -58,10 +58,10 @@ graph TD
 
 </br>
 
-🔹 Monte Carlo + GBM : 模擬投資標的隨機路徑 → 產生 AV 分布
-🔹 GMDB 設計 : DB = max(保證金額, 帳戶價值)
-🔹 Death Cost = max(DB - AV, 0) → 代表公司實際承擔的保證損失
-🔹 Paired Simulation : 同一保戶 / 同一市場路徑 / 同一死亡亂數 → 只改「是否解約」
+🔹 Monte Carlo + GBM : 模擬投資標的隨機路徑 → 產生 AV 分布  
+🔹 GMDB 設計 : DB = max(保證金額, 帳戶價值)  
+🔹 Death Cost = max(DB - AV, 0) → 代表公司實際承擔的保證損失  
+🔹 Paired Simulation : 同一保戶 / 同一市場路徑 / 同一死亡亂數 → 只改「是否解約」  
 🔹 Logistic Model : 基礎解約意願 / Moneyness / 解約費用 / 市場報酬 → 隨機亂數<解約機率 視為解約
 
 ---
