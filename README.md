@@ -147,52 +147,31 @@ with lapse 平均 profit 略為右移
 | Survivor lapsed        |  92 | 0.00            | 0.00              | 0.00            | 0.00              | 128,653.46             | 120,959.61               |
 | Death avoided by lapse |   7 | 2,766,766.23    | 0.00              | 234,827.30      | 0.00              | -32,668.12             | 118,764.67               |
 
-1. Same outcome >> (1) 保戶在兩邊皆死亡，且死亡發生在解約前 或 (2) 兩邊都未死亡、with lapse 也沒有解約
+1. Same outcome >> (1) 保戶在兩邊皆死亡，且死亡發生在解約前 或 (2) 兩邊都未死亡、with lapse 也沒有解約  
 這兩種情況兩模型現金流完全一致， PV profit 沒有任何差異。
 
-2. Survivor lapsed 
+2. Survivor lapsed   
 保戶在兩種情境下皆未死亡( DB & DC = 0)，但 with lapse 下保戶提前解約少收未來管理費與 COI，雖有 surrender charge 作補償，但整體 PV profit 略為下降，顯示對於原本不會產生保證成本的保戶而言，lapse 反而降低公司利潤。
 
-3. Death avoided by lapse 
+3. Death avoided by lapse   
 No lapse 原本死亡保戶在 with lapse 下於死亡前提前解約，完全避免DB & DC ，PV profit 轉為正值（118,765），平均提升約 15 萬。這顯示 lapse 的主要價值並非來自解約費收入，而是來自避免少數高損失的死亡情境。
 
 
-|類型	|說明	|對 Profit 影響|
-|Same outcome	|無差異	|無影響|
-|Survivor lapsed	|提前解約	|小幅下降|
-|Death avoided by lapse	|避開死亡	|大幅提升|
+🔥 Core Insight : 本次模擬結果中 PV profit 的提升主要來自 "Death avoided by lapse" 這類機率低但影響重大的事件，但從分布和數值來看影響有限。
 
-
-🔥 Core Insight : 平均 profit 的提升來自少數「避免死亡」的案例，而非整體改善。
-
-## 🔥 核心發現
-1️⃣ Lapse 的雙重效果
-Fee 收入 ↓
-Risk 暴露 ↓
-2️⃣ 平均 vs Tail
-平均 Profit ↑
-Tail Risk ≈ 不變
-
-👉 關鍵原因：
-
-Lapse reduces frequency, not severity
-3️⃣ 風險來源
-
-GMDB 的主要風險來自：
-
+#### 🔍 核心發現
+1. Lapse 的雙重效果
+一方面會減少未來費用收入，原本不會發生死亡的保戶提前解約時，可能降低 PV profit；另一方面則使部分保戶提前退出風險池，降低未來死亡給付與保證成本暴露
+2. 平均 vs Tail
+模型平均 Profit 提升但 Tail Risk 不變，Lapse reduces frequency, not severity
+3. GMDB 的主要風險來自：
 市場大跌 + 發生死亡（Joint Tail Event）
-4️⃣ 商品設計含意
-Lapse 是「風險釋放機制」
-不是「風險解決機制」
 
-👉 Tail risk 仍需：
-
-保證設計
-費率調整
-Hedging
-⚠️ 模型限制
-單一資產（GBM）/ 年限 20 年
-無 stochastic interest rate
-無 hedging cost
-lapse 未校準
+👉 改善 Tail risk 仍需：保證設計 / 費率調整 / Hedging  
+ 
+⚠️ 模型限制  
+1. 單一資產（GBM）/ 年限 20 年  
+2. 無 stochastic interest rate  
+3. 無 hedging cost  
+4. lapse 未校準  
 
