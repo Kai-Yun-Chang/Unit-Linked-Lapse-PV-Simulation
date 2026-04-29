@@ -12,6 +12,8 @@
 2. 參考實際商品保單結構、死亡率與 COI 費率，計算 Death Benefit 與 Death Cost 。
 3. 引入動態解約模型（dynamic lapse model），使保戶行為隨帳戶價值、保證水準與市場環境變動。
 
+---
+#### 💻 核心程式碼 完整模擬過程與數據分析請參考： [GMDB 定價模型主程式 (Jupyter Notebook)](./Simulation.ipynb)
 ------
 
 ### 🎯 目標 : 利用 paired Monte Carlo simulation，在相同市場路徑與死亡隨機數下比較 No Lapse vs With Lapse
@@ -22,10 +24,6 @@
 4. PV Profit（NPV）
 5. 拆解利潤來源與 tail risk
 
-----------
-
-
-#### 💻 核心程式碼 完整模擬過程與數據分析請參考： [GMDB 定價模型主程式 (Jupyter Notebook)](./Simulation.ipynb)
 ---
 
 ### 🧩 Model Framework
@@ -105,9 +103,9 @@ graph TD
 -  Tail（P95 / P99 / Max）    
    With lapse 下P95 / P99：略微上升 Max：兩情境相同 👉 尾端損失未下降
 
-🔥 Core Insight  
-- Death Benefit 下降（高 AV 給付減少）
-- Death Cost 尾端幾乎不變，未降低真正的保證風險
+**🔥 Core Insight**  
+**- Death Benefit 下降（高 AV 給付減少）**
+**- Death Cost 尾端幾乎不變，未降低真正的保證風險**
 
 | Metric   | DB (No Lapse)   | DB (With Lapse)   | Death Cost (No Lapse)   | Death Cost (With Lapse)   |
 |:---------|----------------:|------------------:|------------------------:|--------------------------:|
@@ -124,12 +122,12 @@ graph TD
 #### 3.  PV Profit 分析（Log Scale）
 
 
--  Min、P1  
+-  Min、P1、P5  
 在 no lapse 與 with lapse 下皆相同、P5接近 👉 最極端虧損路徑幾乎相同  
--  Mean、Total PV Profit  
+-  Mean     
 with lapse 平均 profit 略為右移  
 
-🔥 Core Insight : 最壞情境（極端虧損）在兩種情境下幾乎相同，代表 lapse 無法消除 joint tail event（市場下跌 + 死亡）， tail risk 並未改善
+**🔥 Core Insight : 最壞情境（極端虧損）在兩種情境下幾乎相同，代表 lapse 無法消除 joint tail event（市場下跌 + 死亡）， tail risk 並未改善**
 
 | Metric       | No Lapse         | With Lapse       |
 |:-------------|-----------------:|-----------------:|
@@ -154,16 +152,16 @@ with lapse 平均 profit 略為右移
 | Death avoided by lapse |   7 | 2,766,766.23    | 0.00              | 234,827.30      | 0.00              | -32,668.12             | 118,764.67               |
 
 1. Same outcome >> (1) 保戶在兩邊皆死亡，且死亡發生在解約前 或 (2) 兩邊都未死亡、with lapse 也沒有解約  
-這兩種情況兩模型現金流完全一致， PV profit 沒有任何差異。
+這兩種情況兩模型現金流完全一致， PV profit 沒有任何差異
 
 2. Survivor lapsed   
-保戶在兩種情境下皆未死亡( DB & DC = 0)，但 with lapse 下保戶提前解約少收未來管理費與 COI，雖有 surrender charge 作補償，但整體 PV profit 略為下降，顯示對於原本不會產生保證成本的保戶而言，lapse 反而降低公司利潤。
+保戶在兩種情境下皆未死亡( DB & DC = 0)，但 with lapse 下保戶提前解約少收未來管理費與 COI，雖有 surrender charge 作補償，但整體 PV profit 略為下降，顯示對於原本不會產生保證成本的保戶而言，lapse 反而降低公司利潤
 
 3. Death avoided by lapse   
-No lapse 原本死亡保戶在 with lapse 下於死亡前提前解約，完全避免DB & DC ，PV profit 轉為正值（118,765），平均提升約 15 萬。這顯示 lapse 的主要價值並非來自解約費收入，而是來自避免少數高損失的死亡情境。
+No lapse 原本死亡保戶在 with lapse 下於死亡前提前解約，完全避免DB & DC ，PV profit 轉為正值（118,765），平均提升約 15 萬。這顯示 lapse 的主要價值並非來自解約費收入，而是來自避免少數高損失的死亡情境
 
 
-🔥 Core Insight : 本模擬結果 PV profit 提升主要來自 "Death avoided by lapse" 這類機率低但影響重大的事件，但從分布和數值來看影響有限。
+**🔥 Core Insight : 本模擬結果 PV profit 提升主要來自 "Death avoided by lapse" 這類機率低但影響重大的事件，但從分布和數值來看影響有限**
 
 ---
 
