@@ -108,8 +108,8 @@ graph TD
 (1) With lapse 下 P95、P99、Max 右尾明顯下降 👉 DB tail 來自高 AV（好市場），Lapse 移除高 AV 保戶 → 高給付減少  
 
 **Death Cost（實際風險）**      
--  Mean  
-(1) With lapse 略高 👉 解約移除低風險（高 AV）路徑 留下來的死亡案例 AV 較低  
+-  Mean
+>> With lapse 略高 👉 解約移除低風險（高 AV）路徑 留下來的死亡案例 AV 較低  
 -  Tail（P95 / P99 / Max）  
 (1) With lapse 下P95 / P99：略微上升 Max：兩情境相同 👉 尾端損失未下降
 
