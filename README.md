@@ -69,7 +69,7 @@ graph TD
 ### 📊 模擬結果
 #### 1.  No Lapse / With Lapse 模型基本比較
    
-(1) Final AV : With lapse（153萬）低於 No lapse（180萬）(解約後 AV 補 0 → 拉低整體平均)  
+(1) Final AV : With lapse（153萬）低於 No lapse（180萬）👉 解約後 AV 補 0 → 拉低整體平均  
 (2) Lapse Behavior : With lapse 模型解約率約 9.9%、平均發生於 第 13 年  
 (3) Duration :With lapse 較短（227 vs 235 月） 👉 減少收入，同時降低風險暴露期間
 (4) Death Rate : 7.3% → 6.6%  解約使部分保戶提前退出風險池 👉  Unconditional DB / Death Cost 下降
