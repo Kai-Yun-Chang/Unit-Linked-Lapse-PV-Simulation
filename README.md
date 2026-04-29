@@ -1,8 +1,8 @@
-#📘 投資型保單 GMDB 模擬與解約行為分析
+# 📘 投資型保單 GMDB 模擬與解約行為分析
 
-##Unit-Linked Insurance Simulation with GMDB and Dynamic Lapse Behavior
+## Unit-Linked Insurance Simulation with GMDB and Dynamic Lapse Behavior
 
-###📌 專案簡介
+### 📌 專案簡介
 
 本專案建立投資型保單（Unit-Linked Insurance）的 Monte Carlo Simulation 模型，參考實際商品設計，分析保戶解約行為（lapse behavior）對死亡給付、死亡成本與公司獲利的影響。
 
@@ -14,7 +14,7 @@
 
 ------
 
-##🎯 目標 : 利用 paired Monte Carlo simulation 設計，在相同市場路徑與死亡隨機數下比較 No Lapse vs With Lapse
+## 🎯 目標 : 利用 paired Monte Carlo simulation 設計，在相同市場路徑與死亡隨機數下比較 No Lapse vs With Lapse
 分析：
 1. Account Value（AV）
 2. Death Benefit（DB）
@@ -61,7 +61,7 @@ graph TD
 🔹 Paired Simulation : 同一保戶 / 同一市場路徑 / 同一死亡亂數 → 只改「是否解約」
 🔹 Logistic Model : 基礎解約意願 / Moneyness / 解約費用 / 市場報酬 → 隨機亂數<解約機率 視為解約
 ---
-##📊 模擬結果
+## 📊 模擬結果
 1.  AV 路徑比較（Conditional vs Unconditional）
 
 圖說：
@@ -100,7 +100,7 @@ Death avoided by lapse	避開死亡	大幅提升
 圖說：
 平均 profit 的提升來自少數「避免死亡」的案例，而非整體改善。
 
-##🔥 核心發現
+## 🔥 核心發現
 1️⃣ Lapse 的雙重效果
 Fee 收入 ↓
 Risk 暴露 ↓
