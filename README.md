@@ -14,7 +14,7 @@
 
 ------
 
-## 🎯 目標 : 利用 paired Monte Carlo simulation 設計，在相同市場路徑與死亡隨機數下比較 No Lapse vs With Lapse
+### 🎯 目標 : 利用 paired Monte Carlo simulation 設計，在相同市場路徑與死亡隨機數下比較 No Lapse vs With Lapse
 分析：
 1. Account Value（AV）
 2. Death Benefit（DB）
@@ -28,7 +28,7 @@
 #### 💻 核心程式碼 完整模擬過程與數據分析請參考： [GMDB 定價模型主程式 (Jupyter Notebook)](./Simulation.ipynb)
 ---
 
-## 🧩 Model Framework
+### 🧩 Model Framework
 
 ### Simulation Flow
 
@@ -55,13 +55,14 @@ graph TD
     style Alive fill:#ffe9ef,stroke:#ffdee7
     style Simulation fill:#c0d9d9,stroke:#01579b,stroke-width:2px
 ```
+</br>
 🔹 Monte Carlo + GBM : 模擬投資標的隨機路徑 → 產生 AV 分布
 🔹 GMDB 設計 : DB = max(保證金額, 帳戶價值)
 🔹 Death Cost = max(DB - AV, 0) → 代表公司實際承擔的保證損失
 🔹 Paired Simulation : 同一保戶 / 同一市場路徑 / 同一死亡亂數 → 只改「是否解約」
 🔹 Logistic Model : 基礎解約意願 / Moneyness / 解約費用 / 市場報酬 → 隨機亂數<解約機率 視為解約
 ---
-## 📊 模擬結果
+### 📊 模擬結果
 1.  AV 路徑比較（Conditional vs Unconditional）
 
 圖說：
