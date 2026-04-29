@@ -100,12 +100,12 @@ graph TD
 | Max      | 5,154,733.7489  | 3,250,789.7456    | 1,126,064.3153          | 1,126,064.3153            |
 
 
-- Death Benefit（給付金額）  
-*(1) Mean / Median*  
-With lapse 平均 DB 較低 👉 高 AV 保戶提前解約 → 高給付案例減少  
-DB median 皆為 160萬 👉 至少一半案例仍由保證機制主導  
-(2) Tail（P95 / P99 / Max）    
-With lapse 下 P95、P99、Max 右尾明顯下降 👉 DB tail 來自高 AV（好市場），Lapse 移除高 AV 保戶 → 高給付減少  
+**Death Benefit（給付金額）**  
+-  Mean / Median  
+(1) With lapse 平均 DB 較低 👉 高 AV 保戶提前解約 → 高給付案例減少  
+(2) DB median 皆為 160萬 👉 至少一半案例仍由保證機制主導
+-  Tail（P95 / P99 / Max）    
+(1) With lapse 下 P95、P99、Max 右尾明顯下降 👉 DB tail 來自高 AV（好市場），Lapse 移除高 AV 保戶 → 高給付減少  
 
 - Death Cost（實際風險）      
 (1) Mean  
