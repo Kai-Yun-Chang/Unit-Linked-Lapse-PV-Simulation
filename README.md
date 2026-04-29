@@ -109,7 +109,7 @@ graph TD
 
 **Death Cost（實際風險）**      
 -  Mean
->> With lapse 略高 👉 解約移除低風險（高 AV）路徑 留下來的死亡案例 AV 較低  
+(1) With lapse 略高 👉 解約移除低風險（高 AV）路徑 留下來的死亡案例 AV 較低  
 -  Tail（P95 / P99 / Max）  
 (1) With lapse 下P95 / P99：略微上升 Max：兩情境相同 👉 尾端損失未下降
 
@@ -130,9 +130,9 @@ graph TD
 | Total Profit | 117,115,302.2221 | 117,467,497.8194 |
 
 
-(1) Min、P1  
+-  Min、P1  
 在 no lapse 與 with lapse 下皆相同、P5接近 👉 最極端虧損路徑幾乎相同  
-(2) Mean、Total PV Profit  
+-  Mean、Total PV Profit  
 with lapse 平均 profit 略為右移  
 
 
