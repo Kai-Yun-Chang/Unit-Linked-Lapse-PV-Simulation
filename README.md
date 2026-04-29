@@ -14,7 +14,7 @@
 
 ------
 
-### 🎯 目標 : 利用 paired Monte Carlo simulation 設計，在相同市場路徑與死亡隨機數下比較 No Lapse vs With Lapse
+### 🎯 目標 : 利用 paired Monte Carlo simulation，在相同市場路徑與死亡隨機數下比較 No Lapse vs With Lapse
 分析：
 1. Account Value（AV）
 2. Death Benefit（DB）
@@ -45,7 +45,7 @@ graph TD
         S1 -->|U >= qx| Alive[生存]
         Dead --> DB[計算給付額DB]
         Alive --> |AV不足扣款| Lapse[保單失效]
-        Alive --> |存續|S2[GBM模擬標的資產路徑、隨機解約模擬]
+        Alive --> |存續|S2[GBM 模擬標的資產路徑、隨機解約模擬]
         S2 --> |lapse| Lapse2[解約: 計算surrender charge/ surrender value]
         S2 --> |NO lapse|S3[套用保單結構更新AV]
         S3 --> |進入下個月模擬| S1
@@ -61,6 +61,7 @@ graph TD
 🔹 Death Cost = max(DB - AV, 0) → 代表公司實際承擔的保證損失
 🔹 Paired Simulation : 同一保戶 / 同一市場路徑 / 同一死亡亂數 → 只改「是否解約」
 🔹 Logistic Model : 基礎解約意願 / Moneyness / 解約費用 / 市場報酬 → 隨機亂數<解約機率 視為解約
+</br>
 ---
 ### 📊 模擬結果
 1.  AV 路徑比較（Conditional vs Unconditional）
