@@ -61,7 +61,7 @@ graph TD
 🔹 Death Cost = max(DB - AV, 0) → 代表公司實際承擔的保證損失
 🔹 Paired Simulation : 同一保戶 / 同一市場路徑 / 同一死亡亂數 → 只改「是否解約」
 🔹 Logistic Model : 基礎解約意願 / Moneyness / 解約費用 / 市場報酬 → 隨機亂數<解約機率 視為解約
-</br>
+
 ---
 ### 📊 模擬結果
 1.  AV 路徑比較（Conditional vs Unconditional）
