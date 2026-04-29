@@ -85,7 +85,7 @@ graph TD
 | Unconditional Death Benefit (Mean) | 140,013.8139   | 120,646.4503   |
 | Unconditional Death Cost (Mean)    | 19,930.2081    | 18,286.4170    |
 
-![圖片描述](Images/av.png)
+![圖片描述](pics/av.png)
 
 ---
 
@@ -99,6 +99,8 @@ graph TD
 | P99      | 4,406,276.8821  | 3,067,684.4443    | 972,626.5051            | 987,544.0700              |
 | Max      | 5,154,733.7489  | 3,250,789.7456    | 1,126,064.3153          | 1,126,064.3153            |
 
+![圖片描述](pics/db.png)
+![圖片描述](pics/dc.png)
 
 **Death Benefit（給付金額）**  
 -  Mean / Median  
@@ -129,6 +131,7 @@ graph TD
 | Mean         | 117,115.3022     | 117,467.4978     |
 | Total Profit | 117,115,302.2221 | 117,467,497.8194 |
 
+![圖片描述](pics/pro.png)
 
 -  Min、P1  
 在 no lapse 與 with lapse 下皆相同、P5接近 👉 最極端虧損路徑幾乎相同  
