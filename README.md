@@ -66,19 +66,25 @@ graph TD
 
 ---
 ### 📊 模擬結果
-1.  AV 路徑比較（Conditional vs Unconditional）
+1.  No Lapse / With Lapse 模型基本比較
+   
+- Final AV : With lapse（153萬）低於 No lapse（180萬）(解約後 AV 補 0 → 拉低整體平均)
+- Lapse Behavior : With lapse 模型解約率約 9.9%、平均發生於 第 13 年
+- Duration :　With lapse 較短（227 vs 235 月） 👉 減少收入，同時降低風險暴露期間
+- Death Rate : 7.3% → 6.6%  解約使部分保戶提前退出風險池 👉  Unconditional DB / Death Cost 下降
 
 | Metric                             | No Lapse       | With Lapse     |
-|:-----------------------------------|:---------------|:---------------|
+|:-----------------------------------|---------------:|---------------:|
 | Unconditional Final AV             | 1,805,082.3936 | 1,531,913.0913 |
 | Conditional Final AV               | 1,947,230.1980 | 1,834,626.4567 |
 | Lapse Rate                         | 0.0000         | 0.0990         |
-| Avg Lapse Month                    |                | 155.8788       |
+| Avg Lapse Month                    | --             | 155.8788       |
 | Duration                           | 234.9920       | 226.9040       |
 | Death Rate                         | 0.0730         | 0.0660         |
 | Unconditional Death Benefit (Mean) | 140,013.8139   | 120,646.4503   |
 | Unconditional Death Cost (Mean)    | 19,930.2081    | 18,286.4170    |
 
+![圖片描述](Images/av.png)
 圖說：
 Unconditional AV 會受到死亡與解約（補 0）影響而下降；
 Conditional AV 僅計算仍在池中的保戶，因此較高。
