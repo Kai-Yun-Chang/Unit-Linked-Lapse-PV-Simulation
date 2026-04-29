@@ -100,19 +100,19 @@ graph TD
 | Max      | 5,154,733.7489  | 3,250,789.7456    | 1,126,064.3153          | 1,126,064.3153            |
 
 
-- Death Benefit（給付金額）
+- Death Benefit（給付金額）  
 (1) Mean / Median  
 With lapse 平均 DB 較低 👉 高 AV 保戶提前解約 → 高給付案例減少  
 DB median 皆為 160萬 👉 至少一半案例仍由保證機制主導  
 
-(2) Tail（P95 / P99 / Max）  
+(2) Tail（P95 / P99 / Max）    
 With lapse 下 P95、P99、Max 右尾明顯下降 👉 DB tail 來自高 AV（好市場），Lapse 移除高 AV 保戶 → 高給付減少  
 
-- Death Cost（實際風險）  
-(1) Mean
+- Death Cost（實際風險）      
+(1) Mean  
 With lapse 略高 👉 解約移除低風險（高 AV）路徑 留下來的死亡案例 AV 較低  
 
-(2) Tail（P95 / P99 / Max）
+(2) Tail（P95 / P99 / Max）  
 With lapse 下P95 / P99：略微上升 Max：兩情境相同 👉 尾端損失未下降
 
 🔥 Core Insight
@@ -131,10 +131,11 @@ Death Cost 尾端幾乎不變，未降低真正的保證風險。
 | Mean         | 117,115.3022     | 117,467.4978     |
 | Total Profit | 117,115,302.2221 | 117,467,497.8194 |
 
-(1) Min、P1
-在 no lapse 與 with lapse 下皆相同、P5接近 👉 最極端虧損路徑幾乎相同
-(2) Mean、Total PV Profit
-with lapse 平均 profit 略為右移
+(1) Min、P1  
+在 no lapse 與 with lapse 下皆相同、P5接近 👉 最極端虧損路徑幾乎相同  
+
+(2) Mean、Total PV Profit  
+with lapse 平均 profit 略為右移  
 
 
 
