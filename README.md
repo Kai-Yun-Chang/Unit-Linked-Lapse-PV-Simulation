@@ -58,6 +58,7 @@ graph TD
 
 </br>
 
+<模型重點>  
 🔹 Monte Carlo + GBM : 模擬投資標的隨機路徑 → 產生 AV 分布  
 🔹 GMDB 設計 : DB = max(保證金額, 帳戶價值)  
 🔹 Death Cost = max(DB - AV, 0) → 代表公司實際承擔的保證損失  
